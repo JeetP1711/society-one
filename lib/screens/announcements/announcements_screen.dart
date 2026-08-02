@@ -26,7 +26,7 @@ class _AnnouncementsScreenState extends ConsumerState<AnnouncementsScreen>
 
   @override
   void initState() {
-    super.initState()
+    super.initState();
     _tabController = TabController(length: 2, vsync: this);
   }
 

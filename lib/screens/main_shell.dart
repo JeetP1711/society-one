@@ -10,7 +10,6 @@ import 'announcements/announcements_screen.dart';
 import 'maintenance/maintenance_screen.dart';
 import 'amenities/amenity_booking_screen.dart';
 import 'complaints/complaint_list_screen.dart';
-import 'complaints/complaint_form_screen.dart';
 import 'directory/directory_screen.dart';
 import 'noc/noc_screen.dart';
 import 'admin/admin_societies_screen.dart';
@@ -82,13 +81,12 @@ class _MainShellState extends ConsumerState<MainShell> {
           NocScreen(),
         ];
       case UserRole.member:
-      default:
-        return const [
-          DashboardScreen(),
-          VisitorListScreen(),
-          AmenityBookingScreen(),
-          ComplaintListScreen(),
-          MaintenanceScreen(),
+        return [
+          const DashboardScreen(),
+          const VisitorListScreen(),
+          const AmenityBookingScreen(),
+          const ComplaintListScreen(),
+          const MaintenanceScreen(),
         ];
     }
   }
@@ -112,7 +110,6 @@ class _MainShellState extends ConsumerState<MainShell> {
           BottomNavigationBarItem(icon: Icon(Icons.verified_user_rounded), label: 'NOCs'),
         ];
       case UserRole.member:
-      default:
         return const [
           BottomNavigationBarItem(icon: Icon(Icons.home_rounded), label: 'Home'),
           BottomNavigationBarItem(icon: Icon(Icons.qr_code_rounded), label: 'Visitors'),
